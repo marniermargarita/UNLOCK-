@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNLOCK</title>
+</head>
+<body>
+  <h1>UNLOCK</h1>
+  <p>導かれた答えを入力してください。</p>
+
+  <input id="answer" type="text" placeholder="ANSWER">
+  <button onclick="checkAnswer()">解錠する</button>
+
+  <p id="message"></p>
+
+  <script>
+    function checkAnswer() {
+      const answer = document.getElementById("answer").value.trim().toLowerCase();
+
+      if (answer === "memory") {
+        document.getElementById("message").textContent = "カチリ、と小さな音がした。";
+      } else {
+        document.getElementById("message").textContent = "鍵はまだ開かないようだ。";
+      }
+    }
+  </script>
+</body>
+</html>
